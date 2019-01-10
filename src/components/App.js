@@ -8,7 +8,8 @@ let weightKey='weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrige
 class App extends Component {
 
   state = {
-    hogs: hogs
+    hogs: hogs,
+    urls: []
   }
 
   componentDidMount(){
@@ -19,8 +20,11 @@ class App extends Component {
         return gif.images.fixed_height_downsampled
       })
       // let updatedHogs = hogs.map((hog,i)=> Object.assign({},{..hog},url:gifArray[i]))
-      return gifArray
-    }).then(console.log)
+       this.setState({
+         urls: gifArray
+       }, () => console.log(this.state))
+    })
+
   }
 
   handleSortName = () => {
@@ -49,7 +53,7 @@ class App extends Component {
 
   }
 
-  // url={this.state.urls[i]}
+
 
   render() {
 
@@ -61,7 +65,7 @@ class App extends Component {
           Greased ?  <input onChange={this.handleGrease} type="checkbox"/>
 
           <div className="ui-grid-container">
-              {this.state.hogs.map(eachHog => <Tile key={eachHog.name} hogObj={eachHog}/>)}
+              {this.state.hogs.map((eachHog, i) => <Tile key={eachHog.name} url={this.state.urls[i]} hogObj={eachHog}/>)}
 
           </div>
       </div>

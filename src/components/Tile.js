@@ -42,13 +42,13 @@ correctImg = (name) => {
 
 
   render() {
-
+    console.log("this is", this.props.url);
     return (
       <div className={`pigTile`}>
       <button onClick={this.handleHide}>HIDE ME</button>
       <div onClick={this.handleClick} className={this.state.hidden ? "hide" : ""} >
         <p>{this.props.hogObj.name}</p>
-        <img src={require(`../hog-imgs/${this.correctImg(this.props.hogObj.name)}.jpg`)}/>
+        <img src={this.props.url ? this.props.url.url :null}/>
         <Hoginfo clicked={this.state.clicked} hogObj={this.props.hogObj} />
       </div>
       </div>
