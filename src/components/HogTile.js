@@ -64,6 +64,8 @@ render(){
 
 }
 
-
+// anado un buton hide que tiene un evento de click, luego quiero retornar algo a mi funcion padre(app)
+// entonces utilizo una funcion anonima luego utilizo la funcion que herede que es hide y luego le paso
+// el valor que yo quiero que tenga 
 
 export default HogTile
