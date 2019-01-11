@@ -52,10 +52,6 @@ class App extends Component {
   }
 
   render() {
-    let greasedChecker
-
-    !this.state.isButtonClicked ? greasedChecker = <button onClick={this.handleClickGreased} >Show Greased Pigs</button> : greasedChecker = <button onClick={this.handleClickGreased} >Show All Pigs</button>
-
     return (
       <div className="App">
           < Nav />
@@ -64,7 +60,9 @@ class App extends Component {
             <option value="name">Sort By Name</option>
             <option value="weight">Sort By Weight</option>
           </select>
-          {greasedChecker}
+          {!this.state.isButtonClicked ?
+            <button onClick={this.handleClickGreased} >Show Greased Pigs</button> :
+            <button onClick={this.handleClickGreased} >Show All Pigs</button>}
           < HogContainer hogs={this.state.hogs}/>
       </div>
     )

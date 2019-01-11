@@ -7,9 +7,7 @@ class HogTile extends Component {
   }
 
   getHogName = (hogname) => {
-    hogname = hogname.split(" ")
-    let lowerHogName = hogname.map(word => word.toLowerCase())
-    return lowerHogName.join("_") + ".jpg"
+    return hogname.split(" ").map(word => word.toLowerCase()).join("_") + ".jpg"
   }
 
   handleClick = () => {
