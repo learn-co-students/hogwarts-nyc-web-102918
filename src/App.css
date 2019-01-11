@@ -1,3 +1,8 @@
+.PigsInABlanket {
+  display: none;
+
+}
+
 .App {
   margin: 0% 5% 0% 5%;
   text-align: center;
@@ -64,7 +69,7 @@ ul {
 
 .subtleText {
   color: #D1D1D1;
-  font-size: .75em; 
+  font-size: .75em;
 }
 
 
