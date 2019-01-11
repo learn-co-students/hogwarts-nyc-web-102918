@@ -61,8 +61,8 @@ class App extends Component {
             <option value="weight">Sort By Weight</option>
           </select>
           {!this.state.isButtonClicked ?
-            <button onClick={this.handleClickGreased} >Show Greased Pigs</button> :
-            <button onClick={this.handleClickGreased} >Show All Pigs</button>}
+            <button onClick={this.handleClickGreased}>Show Greased Pigs</button> :
+            <button onClick={this.handleClickGreased}>Show All Pigs</button>}
           < HogContainer hogs={this.state.hogs}/>
       </div>
     )
